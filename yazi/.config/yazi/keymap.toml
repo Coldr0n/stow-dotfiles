@@ -1,0 +1,93 @@
+[mgr]
+
+prepend_keymap = [
+	# Hopping
+	{ on = "s", run = "arrow prev", desc = "Previous file" },
+	{ on = "t", run = "arrow next", desc = "Next file" },
+
+	{ on = "<C-d>", run = "arrow 5", desc = "Seek up 5 units in the preview" },
+	{ on = "<C-u>", run = "arrow -5",  desc = "Seek down 5 units in the preview" },
+    
+	# Navigation
+	{ on = "c", run = "leave", desc = "Back to the parent directory" },
+	{ on = "r", run = "enter", desc = "Enter the child directory" },
+
+	{ on = "C", run = "back",    desc = "Back to previous directory" },
+	{ on = "R", run = "forward", desc = "Forward to next directory" },
+
+	# Seeking
+	{ on = "S", run = "seek -5", desc = "Seek up 5 units in the preview" },
+	{ on = "T", run = "seek 5",  desc = "Seek down 5 units in the preview" },
+
+	{ on = "l",         run = "rename --cursor=before_ext",  desc = "Rename selected file(s)" },
+	{ on = "k",         run = "search --via=fd",             desc = "Search files by name via fd" },
+	{ on = "K",         run = "search --via=rg",             desc = "Search files by content via ripgrep" },
+
+	# Copy
+	{ on = [ "h", "c" ], run = "copy path",             desc = "Copy the file path" },
+	{ on = [ "h", "d" ], run = "copy dirname",          desc = "Copy the directory path" },
+	{ on = [ "h", "f" ], run = "copy filename",         desc = "Copy the filename" },
+	{ on = [ "h", "n" ], run = "copy name_without_ext", desc = "Copy the filename without extension" },
+
+	# Tabs
+	{ on = "j", run = "tab_create --current", desc = "Create a new tab with CWD" }, # done
+]
+
+[tasks]
+
+prepend_keymap = [
+	{ on = "s", run = "arrow prev", desc = "Previous task" },
+	{ on = "t", run = "arrow next", desc = "Next task" },
+]
+
+[spot]
+
+prepend_keymap = [
+	{ on = "s", run = "arrow prev", desc = "Previous line" },
+	{ on = "t", run = "arrow next", desc = "Next line" },
+	{ on = "c", run = "swipe prev", desc = "Swipe to previous file" },
+	{ on = "r", run = "swipe next", desc = "Swipe to next file" },
+	# Copy
+	{ on = [ "h", "h" ], run = "copy cell", desc = "Copy selected cell" },
+]
+
+[pick]
+
+prepend_keymap = [
+	{ on = "s", run = "arrow prev", desc = "Previous option" },
+	{ on = "t", run = "arrow next", desc = "Next option" },
+]
+
+[input]
+
+prepend_keymap = [
+	{ on = "l", run = "replace",                         desc = "Replace a single character" },
+
+	{ on = "c",       run = "move -1", desc = "Move back a character" },
+	{ on = "r",       run = "move 1",  desc = "Move forward a character" },
+
+	{ on = "h", run = "delete --cut --insert",                     desc = "Cut selected characters, and enter insert mode" },
+	{ on = "C", run = [ "delete --cut --insert", "move eol" ],     desc = "Cut until EOL, and enter insert mode" },
+]
+
+[confirm]
+
+prepend_keymap = [
+	{ on = "s", run = "arrow prev", desc = "Previous line" },
+	{ on = "r", run = "arrow next", desc = "Next line" },
+]
+
+[cmp]
+
+prepend_keymap = [
+	{ on = "<A-s>", run = "arrow prev", desc = "Previous item" },
+	{ on = "<A-r>", run = "arrow next", desc = "Next item" },
+]
+
+[help]
+
+prepend_keymap = [
+	{ on = "s", run = "arrow prev", desc = "Previous line" },
+	{ on = "t", run = "arrow next", desc = "Next line" },
+]
+
