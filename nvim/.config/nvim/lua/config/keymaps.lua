@@ -55,6 +55,3 @@ vim.keymap.set("n", "gb", ":bprevious<CR>", { desc = "Switch to previous buffer"
 vim.keymap.set("n", "gw", ":bnext<CR>", { desc = "Switch to next buffer", silent = true })
 vim.keymap.set("n", "gB", ":bfirst<CR>", { desc = "Switch to first buffer", silent = true })
 vim.keymap.set("n", "gW", ":blast<CR>", { desc = "Switch to last buffer", silent = true })
-
-vim.keymap.set("t", "<ESC>", [[<C-\><C-n>]], { desc = "Go into normal mode", silent = true })
-vim.keymap.set("n", "ç", ":ToggleTerm<CR>")
