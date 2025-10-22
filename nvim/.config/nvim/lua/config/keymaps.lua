@@ -22,10 +22,10 @@ vim.keymap.set("n", "êt", "<C-w>j")
 vim.keymap.set("n", "ês", "<C-w>k")
 vim.keymap.set("n", "êr", "<C-w>l")
 
-  vim.keymap.set('t', 'êc', [[<Cmd>wincmd h<CR>]])
-  vim.keymap.set('t', 'êt', [[<Cmd>wincmd j<CR>]])
-  vim.keymap.set('t', 'ês', [[<Cmd>wincmd k<CR>]])
-  vim.keymap.set('t', 'êr', [[<Cmd>wincmd l<CR>]])
+vim.keymap.set("t", "êc", [[<Cmd>wincmd h<CR>]])
+vim.keymap.set("t", "êt", [[<Cmd>wincmd j<CR>]])
+vim.keymap.set("t", "ês", [[<Cmd>wincmd k<CR>]])
+vim.keymap.set("t", "êr", [[<Cmd>wincmd l<CR>]])
 
 -- window positionning
 vim.keymap.set("n", "êC", "<C-w>H", { desc = "Move window left" })
