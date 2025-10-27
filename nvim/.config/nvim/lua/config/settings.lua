@@ -22,3 +22,4 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 
 vim.opt.hidden = true
+vim.opt_local.conceallevel = 2
