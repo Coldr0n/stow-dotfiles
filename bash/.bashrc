@@ -29,6 +29,7 @@ PS1='\w $ '
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 . "$HOME/.cargo/env"
 
+# open yazi so that exiting cd into the directory
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -43,15 +44,14 @@ export NVM_DIR="$HOME/.nvm"
 
 alias nv="nvim ."
 
+# Links the project directory
 lndir() {
     unlink ~/project_directory_link
     ln -s "$(pwd)" ~/project_directory_link
 }
 
 alias lndir="lndir"
-
-alias cdp="cd -P ~/project_directory_link"
+alias cdp="cd -P ~/project_directory_link" # Go to the project directory
 
 export EDITOR='nvim'
 export VISUAL='nvim'
-

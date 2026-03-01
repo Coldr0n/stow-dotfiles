@@ -19,5 +19,8 @@ return {
 			"neanias/everforest-nvim",
 			after = make_transparent,
 		},
+		{
+			"drewtempelmeyer/palenight.vim",
+		},
 	},
 }

@@ -20,6 +20,8 @@ return {
                     null_ls.builtins.diagnostics.pylint,
 
                     null_ls.builtins.formatting.prettier,
+                    -- latex
+                    null_ls.builtins.formatting.latexindent,
                 },
             })
 

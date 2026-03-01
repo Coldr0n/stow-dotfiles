@@ -5,7 +5,7 @@ return {
     },
     {
         "williamboman/mason-lspconfig.nvim",
-        opts = { ensure_installed = { "lua_ls", "rust_analyzer", "pylsp", "jsonls" } },
+        opts = { ensure_installed = { "lua_ls", "rust_analyzer", "pylsp", "jsonls", "texlab" } },
     },
     {
         "neovim/nvim-lspconfig",

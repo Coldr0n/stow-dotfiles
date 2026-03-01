@@ -3,7 +3,6 @@ return {
 	lazy = false, -- we don't want to lazy load VimTeX
 	init = function()
 		vim.g.vimtex_view_method = "zathura"
-		vim.g.maplocalleader = " "
 		-- Config "taken" from https://git.epheme.re/fmouhart/nvim-config-kickstart/commit/b420fa2111a2915c38f8137c966de3ee5db5b7a4
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 			callback = function()
