@@ -5,24 +5,24 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		opts = { ensure_installed = { "lua_ls", "rust_analyzer", "pylsp", "jsonls", "texlab" } },
+		opts = { ensure_installed = { "lua_ls", "rust_analyzer", "pylsp", "jsonls" } },
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 			-- Configure servers (if custom config is needed)
-			vim.lsp.config("lua_ls", {})
-			vim.lsp.config("rust_analyzer", {})
-			vim.lsp.config("pylsp", {})
-			vim.lsp.config("jsonls", {})
-			vim.lsp.config("texlab", {})
+			vim.lsp.config("lua_ls", { capabilities = capabilities })
+			vim.lsp.config("rust_analyzer", { capabilities = capabilities })
+			vim.lsp.config("pylsp", { capabilities = capabilities })
+			vim.lsp.config("jsonls", { capabilities = capabilities })
 
 			-- Enable LSP servers
 			vim.lsp.enable("lua_ls")
 			vim.lsp.enable("rust_analyzer")
 			vim.lsp.enable("pylsp")
 			vim.lsp.enable("jsonls")
-			vim.lsp.enable("texlab")
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function(args)
