@@ -19,3 +19,7 @@ vim.opt.scrolloff = 8
 
 vim.opt.hidden = true
 vim.opt_local.conceallevel = 2
+
+-- spelling
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true

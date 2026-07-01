@@ -27,7 +27,7 @@ vim.keymap.set("t", "êt", [[<Cmd>wincmd j<CR>]])
 vim.keymap.set("t", "ês", [[<Cmd>wincmd k<CR>]])
 vim.keymap.set("t", "êr", [[<Cmd>wincmd l<CR>]])
 
--- window positionning
+-- window positioning
 vim.keymap.set("n", "êC", "<C-w>H", { desc = "Move window left" })
 vim.keymap.set("n", "êT", "<C-w>J", { desc = "Move window right" })
 vim.keymap.set("n", "êS", "<C-w>K", { desc = "Move window up" })
@@ -55,3 +55,18 @@ vim.keymap.set("n", "gb", ":bprevious<CR>", { desc = "Switch to previous buffer"
 vim.keymap.set("n", "gw", ":bnext<CR>", { desc = "Switch to next buffer", silent = true })
 vim.keymap.set("n", "gB", ":bfirst<CR>", { desc = "Switch to first buffer", silent = true })
 vim.keymap.set("n", "gW", ":blast<CR>", { desc = "Switch to last buffer", silent = true })
+
+-- spelling remap
+vim.keymap.set("n", "<leader>ss", "z=", { desc = "Suggestion for spelling"})
+vim.keymap.set("n", "<leader>S", "1z=", { desc = "Take first suggestion for spelling"})
+
+vim.keymap.set("n", "<leader>sg", "zg", { desc = "Add word as a good word" })
+vim.keymap.set("n", "<leader>sG", "zG", { desc = "Add word as an internal good word" })
+vim.keymap.set("n", "<leader>sw", "zw", { desc = "Add word as a wrong word" })
+vim.keymap.set("n", "<leader>sW", "zW", { desc = "Add word as an internal wrong word" })
+
+-- undoes spelling remap
+vim.keymap.set("n", "<leader>sug", "zug", { desc = "Undo word as a good word" })
+vim.keymap.set("n", "<leader>suG", "zuG", { desc = "Undo word as an internal good word" })
+vim.keymap.set("n", "<leader>suw", "zuw", { desc = "Undo word as a wrong word" })
+vim.keymap.set("n", "<leader>suW", "zuW", { desc = "Undo word as an internal wrong word" })
