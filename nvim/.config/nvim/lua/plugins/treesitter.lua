@@ -1,9 +1,9 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	lazy = false,
 	build = ":TSUpdate",
 	opts_extend = { "ensure_installed" },
 	opts = {
-		highlight = { enable = true, disable = { "latex" } },
 		auto_install = true,
 	},
 

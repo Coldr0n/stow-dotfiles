@@ -14,12 +14,14 @@ return {
 			vim.lsp.config("lua_ls", {})
 			vim.lsp.config("rust_anlyzer", {})
 			vim.lsp.config("pylsp", {})
+			vim.lsp.config("clangd", {})
 
 			-- Enable LSP servers
 			vim.lsp.enable({
 				"lua_ls", -- lua
 				"rust_analyzer", -- rust
 				"pylsp", -- python
+				"clangd", -- c
 			})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
